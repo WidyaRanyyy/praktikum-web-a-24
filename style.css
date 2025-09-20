@@ -8,21 +8,103 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.7;
-  background-color: #f8f9fa;
-  color: #2d3436;
+  color: #ffffff;
+}
+#myVideo {
+  position: fixed;        
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;      
+  z-index: -1;             
+  filter: brightness(50%); 
 }
 
 header {
-  background: linear-gradient(135deg, #004c4c, #006666);
+  background: linear-gradient(135deg, #841751, #db2796);
   color: #fff;
   padding: 2rem 1rem;
-  text-align: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.logo-judul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1; 
+}
+
+.logo-kanan {
+  height: 50px;
+  width: auto;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
+
+.header-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 4px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.input-wrapper:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.input-wrapper input[type="text"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  color: white;
+  font-size: 0.95rem;
+  width: 800px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-wrapper input::placeholder {
+  color: #eee;
+}
+
+.input-wrapper button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: transform 0.2s ease;
+}
+
+.input-wrapper button:hover {
+  transform: scale(1.2);
+}
+
 
 .nav-links {
   display: flex;
@@ -81,7 +163,7 @@ header h1 {
 
 .card.card-featured {
   border: 3px solid transparent;
-  background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #006666, #00a8a8) border-box;
+  background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #9a1c5f, #db2796) border-box;
 }
 
 .card img {
@@ -104,12 +186,12 @@ header h1 {
 }
 
 .btn.btn-primary {
-  background-color: #006666;
+  background-color: #990753;
   color: white;
 }
 
 .btn.btn-primary:hover {
-  background-color: #004c4c;
+  background-color: #990753;
   transform: scale(1.05);
 }
 
@@ -123,7 +205,7 @@ header h1 {
 
 /* Footer */
 footer {
-  background: linear-gradient(135deg, #003333, #004c4c);
+  background: linear-gradient(135deg, #841751, #db2796);
   color: white;
   text-align: center;
   padding: 1.5rem;
@@ -182,4 +264,41 @@ footer a:hover {
   .card {
     padding: 1rem;
   }
+}
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .header-form {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .input-wrapper input[type="text"] {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.video-player {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #9a1c5f, #db2796) border-box;
+  border-radius: 10px;
+  margin-top: 20px;
 }
